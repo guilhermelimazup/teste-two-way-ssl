@@ -4,7 +4,7 @@ const express = require('express');
 
 const app = express();
 
-app.get('/', (req, res) => {
+app.get('/test', (req, res) => {
   if (!req.client.authorized) {
     return res.status(401).send('Invalid client certificate authentication.');
   }
